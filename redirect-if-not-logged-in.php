@@ -78,7 +78,7 @@ function redirect_if_not_logged_in_url_field( $args ) {
 	$id = $args['label_for'];
 
 	printf(
-		'<input name="%s" id="%s" type="url" value="%s" class="code" />',
+		'<input name="%s" id="%s" type="url" value="%s" class="regular-text code" />',
 		$id,
 		$id,
 		get_option( 'redirect_if_not_logged_in_url' )
