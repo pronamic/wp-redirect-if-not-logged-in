@@ -23,13 +23,14 @@ GitHub URI: https://github.com/pronamic/wp-redirect-if-not-logged-in
 function redirect_if_not_logged_in_init() {
 	global $pagenow;
 
-	if (
-		! in_array( $pagenow, array( 'wp-login.php', 'wp-register.php' ) )
-			&&
-		! is_admin()
-			&&
-		! is_user_logged_in()
-	) {
+	$redirect  = true;
+	$redirect &= ! in_array( $pagenow, array( 'wp-login.php', 'wp-register.php' ) );
+	$redirect &= ! is_admin();
+	$redirect &= ! is_user_logged_in();
+	$redirect &= ! ( defined( 'DOING_CRON' ) && DOING_CRON );
+	$redirect &= ! ( defined( 'DOING_AJAX' ) && DOING_AJAX );
+
+	if ( $redirect ) {
 		$url = get_option( 'redirect_if_not_logged_in_url' );
 		
 		if ( empty( $url ) ) {
