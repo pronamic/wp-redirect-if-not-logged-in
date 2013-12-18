@@ -37,7 +37,7 @@ function redirect_if_not_logged_in_init() {
 			$url = wp_login_url();
 		}
 
-		wp_redirect( $url, 301 );
+		wp_redirect( $url, 307 );
 
 		exit;
 	}
