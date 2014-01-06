@@ -22,4 +22,4 @@ Redirect vistors to an specific URL if they are not logged in to WordPress.
 == Changelog ==
 
 = 1.0.0 =
-*	Initial release
+*	Initial release.
