@@ -3,7 +3,8 @@
 Plugin Name: Redirect if not logged in
 Plugin URI: http://pronamic.eu/wp-plugins/redirect-if-not-logged-in/
 Description: Redirect vistors to an specific URL if they are not logged in to WordPress.
-Version: 0.1
+
+Version: 1.0.0
 Requires at least: 3.5
 
 Author: Pronamic
