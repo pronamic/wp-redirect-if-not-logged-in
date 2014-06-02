@@ -2,8 +2,8 @@
 Contributors: pronamic, remcotolsma
 Tags: redirect, login, temporary, page
 Requires at least: 3.5
-Tested up to: 3.5
-Stable tag: 1.0.0
+Tested up to: 3.9.1
+Stable tag: 1.1.0
 
 Redirect vistors to an specific URL if they are not logged in to WordPress.
 
@@ -20,6 +20,9 @@ Redirect vistors to an specific URL if they are not logged in to WordPress.
 
 
 == Changelog ==
+
+= 1.1.0 =
+*	Added support for an custom login URL.
 
 = 1.0.0 =
 *	Initial release.
