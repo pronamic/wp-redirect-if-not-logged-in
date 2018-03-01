@@ -35,6 +35,7 @@ function redirect_if_not_logged_in_init() {
 	$redirect &= ! is_user_logged_in();
 	$redirect &= ! ( defined( 'DOING_CRON' ) && DOING_CRON );
 	$redirect &= ! ( defined( 'DOING_AJAX' ) && DOING_AJAX );
+	$redirect &= ! ( defined( 'WP_CLI' ) && WP_CLI );
 	$redirect &= ( $url != home_url( $_SERVER['REQUEST_URI'] ) );
 
 	if ( $redirect ) {
